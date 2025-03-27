@@ -4,13 +4,15 @@ local github = {
 }
 
 local base_url = "https://raw.githubusercontent.com/"..github.user.."/"..github.repo.."/refs/heads/master"
+local dex_asset_id = 9352453730 -- If this ever gets deleted, you can reupload the file "Dex.rbxm" that's in the repo
+
 loadstring(game:HttpGet(base_url.."/cloneref.lua", true))()
 
 -- Dex Bypasses
 loadstring(game:HttpGet(base_url.."/Bypasses.lua", true))()
 
 -- Dex with CloneRef Support (made as global)
-getgenv().Bypassed_Dex = loadstring(game:HttpGet(base_url.."/Dex.lua"))()
+getgenv().Bypassed_Dex = game:GetObjects("rbxassetid://"..tostring(dex_asset_id))[1]
 
 local charset = {}
 for i = 48,  57 do table.insert(charset, string.char(i)) end
