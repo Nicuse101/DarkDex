@@ -4,7 +4,7 @@ local github = {
 }
 
 local base_url = "https://raw.githubusercontent.com/"..github.user.."/"..github.repo.."/refs/heads/master"
-local dex_asset_id = 9352453730 -- If this ever gets deleted, you can reupload the file "Dex.rbxm" that's in the repo
+local dex_asset_id = 9352453730 -- If this ever gets deleted, you can upload the file "Dex.rbxm" that's in the repo
 
 loadstring(game:HttpGet(base_url.."/cloneref.lua", true))()
 
